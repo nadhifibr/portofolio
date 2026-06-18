@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nadhif Ibrahim | Software Engineer & UI/UX Designer",
+  title: "Nadhif Ibrahim",
   description: "Portfolio of Nadhif Ibrahim, a Computer Science student at Universitas Indonesia specializing in software engineering, web development, and UI/UX design.",
   keywords: ["Nadhif Ibrahim", "nadhifibr", "Software Engineer", "Web Developer", "UI/UX Designer", "Universitas Indonesia", "Portfolio"],
   authors: [{ name: "Nadhif Ibrahim" }],
   creator: "Nadhif Ibrahim",
   openGraph: {
-    title: "Nadhif Ibrahim | Software Engineer & UI/UX Designer",
+    title: "Nadhif Ibrahim",
     description: "Portfolio of Nadhif Ibrahim, a Computer Science student at Universitas Indonesia specializing in software engineering, web development, and UI/UX design.",
     url: "https://nadhifibr.site",
     siteName: "Nadhif Ibrahim Portfolio",

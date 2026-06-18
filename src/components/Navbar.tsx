@@ -28,9 +28,12 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <div className="hidden lg:flex items-center gap-6 text-sm font-medium">
           <Link href="#about" className="hover:text-foreground/70 transition-colors">
             About
+          </Link>
+          <Link href="#skills" className="hover:text-foreground/70 transition-colors">
+            Skills
           </Link>
           <Link href="#projects" className="hover:text-foreground/70 transition-colors">
             Projects
@@ -38,8 +41,8 @@ export default function Navbar() {
           <Link href="#experience" className="hover:text-foreground/70 transition-colors">
             Experience
           </Link>
-          <Link href="#skills" className="hover:text-foreground/70 transition-colors">
-            Skills
+          <Link href="#awards" className="hover:text-foreground/70 transition-colors">
+            Awards
           </Link>
           <Link href="#contact" className="hover:text-foreground/70 transition-colors">
             Contact
@@ -48,7 +51,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Controls */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex lg:hidden items-center gap-2">
           <ThemeToggle />
           <button
             className="p-2 ml-2 focus:outline-none"
@@ -70,20 +73,23 @@ export default function Navbar() {
 
       {/* Full-screen Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-background/95 backdrop-blur-md animate-in fade-in duration-300">
-          <Link href="#about" className="text-3xl font-medium hover:text-foreground/70 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+        <div className="lg:hidden fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 bg-background/95 backdrop-blur-md animate-in fade-in duration-300">
+          <Link href="#about" className="text-2xl md:text-3xl font-medium hover:text-foreground/70 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
             About
           </Link>
-          <Link href="#projects" className="text-3xl font-medium hover:text-foreground/70 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-            Projects
-          </Link>
-          <Link href="#experience" className="text-3xl font-medium hover:text-foreground/70 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-            Experience
-          </Link>
-          <Link href="#skills" className="text-3xl font-medium hover:text-foreground/70 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="#skills" className="text-2xl md:text-3xl font-medium hover:text-foreground/70 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
             Skills
           </Link>
-          <Link href="#contact" className="text-3xl font-medium hover:text-foreground/70 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="#projects" className="text-2xl md:text-3xl font-medium hover:text-foreground/70 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            Projects
+          </Link>
+          <Link href="#experience" className="text-2xl md:text-3xl font-medium hover:text-foreground/70 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            Experience
+          </Link>
+          <Link href="#awards" className="text-2xl md:text-3xl font-medium hover:text-foreground/70 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            Awards
+          </Link>
+          <Link href="#contact" className="text-2xl md:text-3xl font-medium hover:text-foreground/70 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
             Contact
           </Link>
         </div>
