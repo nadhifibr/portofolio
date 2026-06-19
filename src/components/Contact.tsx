@@ -17,7 +17,7 @@ export default function Contact() {
             </p>
             
             <div className="flex flex-col space-y-4 pt-4">
-              <a href="mailto:nadhif@example.com" className="flex items-center space-x-4 p-4 rounded-2xl bg-foreground/5 hover:bg-foreground/10 transition-colors w-fit group">
+              <a href="mailto:mnadhifibr@gmail.com" className="flex items-center space-x-4 p-4 rounded-2xl bg-foreground/5 hover:bg-foreground/10 transition-colors w-fit group">
                 <div className="p-3 bg-foreground text-background rounded-xl group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -25,7 +25,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-foreground/60">Email</p>
-                  <p className="font-medium">nadhif@example.com</p>
+                  <p className="font-medium">mnadhifibr@gmail.com</p>
                 </div>
               </a>
               
@@ -38,7 +38,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-foreground/60">Location</p>
-                  <p className="font-medium">Jakarta, Indonesia</p>
+                  <p className="font-medium">South Tangerang, Indonesia</p>
                 </div>
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function Contact() {
         {/* Footer inside the section */}
         <div className="w-full border-t border-foreground/10 mt-24 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-foreground/60">
           <p>© {new Date().getFullYear()} Nadhif Ibrahim. All rights reserved.</p>
-          <p className="mt-2 md:mt-0">Designed & Built with Next.js</p>
+          <p className="mt-2 md:mt-0">Designed & Built with ❤️ </p>
         </div>
       </div>
     </section>
