@@ -21,6 +21,13 @@ const certifications = [
     issuer: "Dicoding Indonesia",
     date: "2026",
     link: "/assets/certification/Spec-Driven Development dengan Kiro.pdf"
+  },
+  {
+    id: 4,
+    title: "Belajar Dasar Cloud dan Gen AI di AWS",
+    issuer: "Dicoding Indonesia",
+    date: "2026",
+    link: "/assets/certification/Belajar Dasar Cloud dan Gen AI di AWS.pdf"
   }
 ];
 
