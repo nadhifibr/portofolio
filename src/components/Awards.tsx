@@ -46,11 +46,11 @@ function AwardCard({ award }: { award: typeof awards[0] }) {
   };
 
   return (
-    <div className="flex flex-col bg-foreground/5 rounded-3xl transition-all duration-500 hover:bg-foreground/10 border border-foreground/10 group h-full overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:shadow-foreground/5">
+    <div className="flex flex-col bg-foreground/5 rounded-3xl transition-all duration-500 hover:bg-foreground/10 border border-foreground/10 group overflow-hidden shadow-sm hover:shadow-xl">
       
       {/* Image Carousel */}
       {award.images && award.images.length > 0 && (
-        <div className="relative w-full h-48 md:h-64 overflow-hidden bg-foreground/10 shrink-0 border-b border-foreground/10 group/carousel">
+        <div className="relative w-full h-[220px] md:h-[280px] overflow-hidden bg-foreground/10 shrink-0 border-b border-foreground/10 group/carousel">
           <Image 
             src={award.images[currentImageIndex]} 
             alt={award.title} 
@@ -65,7 +65,7 @@ function AwardCard({ award }: { award: typeof awards[0] }) {
             <>
               <button 
                 onClick={handlePrev}
-                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/80 text-white rounded-full opacity-100 md:opacity-0 md:group-hover/carousel:opacity-100 transition-opacity duration-300 backdrop-blur-sm z-10"
+                className="absolute left-3 top-1/2 -translate-y-1/2 p-2.5 bg-black/60 hover:bg-black/80 text-white rounded-full opacity-100 md:opacity-0 md:group-hover/carousel:opacity-100 transition-opacity duration-300 backdrop-blur-sm z-10"
                 aria-label="Previous image"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 md:w-5 md:h-5">
@@ -74,7 +74,7 @@ function AwardCard({ award }: { award: typeof awards[0] }) {
               </button>
               <button 
                 onClick={handleNext}
-                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/80 text-white rounded-full opacity-100 md:opacity-0 md:group-hover/carousel:opacity-100 transition-opacity duration-300 backdrop-blur-sm z-10"
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-2.5 bg-black/60 hover:bg-black/80 text-white rounded-full opacity-100 md:opacity-0 md:group-hover/carousel:opacity-100 transition-opacity duration-300 backdrop-blur-sm z-10"
                 aria-label="Next image"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 md:w-5 md:h-5">
@@ -97,18 +97,18 @@ function AwardCard({ award }: { award: typeof awards[0] }) {
       )}
 
       {/* Text Content */}
-      <div className="flex flex-col p-6 md:p-8 flex-grow">
-        <div className="flex justify-between items-start mb-4">
-          <span className="text-sm font-medium px-4 py-1.5 bg-background rounded-full text-foreground/80 shadow-sm border border-foreground/5">
+      <div className="flex flex-col p-6 md:p-8">
+        <div className="mb-4">
+          <span className="text-sm font-medium px-3 py-1.5 bg-background rounded-full text-foreground/80 shadow-sm border border-foreground/5 inline-block">
             {award.date}
           </span>
         </div>
         
-        <h3 className="text-xl md:text-2xl font-semibold mb-6 leading-snug flex-grow transition-colors duration-300 group-hover:text-foreground/80">
+        <h3 className="text-xl md:text-2xl font-semibold mb-6 leading-snug transition-colors duration-300 text-foreground">
           {award.title}
         </h3>
         
-        <h4 className="text-sm md:text-base text-foreground/60 font-medium mt-auto border-t border-foreground/10 pt-4">
+        <h4 className="text-sm md:text-base text-foreground/70 font-medium border-t border-foreground/10 pt-4 mt-auto">
           Issued by {award.issuer}
         </h4>
       </div>

@@ -37,22 +37,22 @@ export default function Certifications() {
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col bg-foreground/5 rounded-3xl transition-all duration-500 hover:bg-foreground/10 border border-foreground/10 group h-full overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:shadow-foreground/5 p-6 md:p-8"
+              className="flex flex-col bg-foreground/5 rounded-3xl transition-all duration-500 hover:bg-foreground/10 border border-foreground/10 group overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-xl p-6 md:p-8"
             >
               <div className="flex justify-between items-start mb-4">
-                <span className="text-sm font-medium px-4 py-1.5 bg-background rounded-full text-foreground/80 shadow-sm border border-foreground/5">
+                <span className="text-sm font-medium px-3 py-1.5 bg-background rounded-full text-foreground/80 shadow-sm border border-foreground/5 inline-block">
                   {cert.date}
                 </span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-foreground/40 group-hover:text-foreground/80 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 md:w-6 md:h-6 text-foreground/40 group-hover:text-foreground/80 transition-colors shrink-0 ml-3">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                 </svg>
               </div>
               
-              <h3 className="text-xl font-semibold mb-4 leading-snug flex-grow transition-colors duration-300 group-hover:text-foreground/80">
+              <h3 className="text-lg md:text-xl font-semibold mb-6 leading-snug transition-colors duration-300 text-foreground group-hover:text-foreground/80">
                 {cert.title}
               </h3>
               
-              <h4 className="text-sm text-foreground/60 font-medium mt-auto border-t border-foreground/10 pt-4">
+              <h4 className="text-sm text-foreground/70 font-medium mt-auto border-t border-foreground/10 pt-4">
                 Issued by {cert.issuer}
               </h4>
             </Link>
