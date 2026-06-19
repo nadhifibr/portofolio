@@ -203,12 +203,12 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
       {/* Click outside to close */}
       <div className="absolute inset-0" onClick={onClose} />
 
-      <div className="relative w-full max-w-5xl max-h-[85vh] bg-background rounded-3xl overflow-hidden flex flex-col lg:flex-row shadow-2xl z-10 animate-in zoom-in-95 duration-300">
+      <div className="relative w-[95%] md:w-full max-w-5xl max-h-[90vh] bg-background rounded-3xl overflow-hidden flex flex-col lg:flex-row shadow-2xl z-10 animate-in zoom-in-95 duration-300">
         
         {/* Close Button */}
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black/80 text-white rounded-full transition-colors backdrop-blur-sm"
+          className="absolute top-3 right-3 lg:top-4 lg:right-4 z-50 p-1.5 lg:p-2 bg-black/60 hover:bg-black/90 text-white rounded-full transition-colors backdrop-blur-sm"
           aria-label="Close modal"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
@@ -217,9 +217,9 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         </button>
 
         {/* Left Side: Gallery */}
-        <div className="w-full lg:w-3/5 flex flex-col bg-black overflow-hidden">
+        <div className="w-full lg:w-3/5 flex flex-col bg-black overflow-hidden shrink-0 lg:shrink h-[35vh] lg:h-auto">
           {/* Active Media Container */}
-          <div className="relative flex-1 min-h-[250px] md:min-h-[300px] lg:min-h-[400px] flex items-center justify-center p-4">
+          <div className="relative flex-1 flex items-center justify-center p-2 lg:p-4 min-h-0">
             {activeMedia.type === "video" ? (
               <video 
                 src={activeMedia.url} 
@@ -227,7 +227,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
                 autoPlay 
                 muted 
                 loop 
-                className="w-full h-full object-contain max-h-[50vh] lg:max-h-[60vh]"
+                className="w-full h-full object-contain"
               />
             ) : (
               <div className="relative w-full h-full">
@@ -243,19 +243,18 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
 
           {/* Thumbnails Row */}
           {project.gallery.length > 1 && (
-            <div className="flex gap-3 overflow-x-auto p-4 bg-white/5 no-scrollbar border-t border-white/10 shrink-0">
+            <div className="flex gap-2 lg:gap-3 overflow-x-auto p-2 lg:p-4 bg-white/5 no-scrollbar border-t border-white/10 shrink-0">
               {project.gallery.map((media, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveMediaIndex(idx)}
-                  className={`relative w-20 h-14 md:w-24 md:h-16 shrink-0 rounded-lg overflow-hidden transition-all duration-200 border-2 ${
+                  className={`relative w-16 h-12 md:w-20 md:h-14 lg:w-24 lg:h-16 shrink-0 rounded-lg overflow-hidden transition-all duration-200 border-2 ${
                     activeMediaIndex === idx ? "border-white scale-105 shadow-md" : "border-transparent opacity-50 hover:opacity-100"
                   }`}
                 >
                   {media.type === "video" ? (
                     <div className="w-full h-full bg-black flex items-center justify-center">
-                      {/* Play Icon for video thumbnails */}
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 lg:w-6 lg:h-6 text-white">
                         <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
                       </svg>
                     </div>
@@ -269,7 +268,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
         </div>
 
         {/* Right Side: Details */}
-        <div className="w-full lg:w-2/5 p-6 md:p-8 flex flex-col overflow-y-auto max-h-[50vh] lg:max-h-[85vh] border-l border-foreground/10 shrink-0">
+        <div className="w-full lg:w-2/5 p-5 md:p-8 flex flex-col flex-1 overflow-y-auto lg:border-l border-t lg:border-t-0 border-foreground/10 min-h-[30vh]">
           <div className="mb-6">
             <span className="inline-block px-3 py-1 mb-4 text-xs font-medium rounded-full bg-foreground/10 text-foreground/80">
               {project.categories.join(", ")}
