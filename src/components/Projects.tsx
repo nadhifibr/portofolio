@@ -32,6 +32,31 @@ const categories = ["All", "Website", "Mobile App", "UI/UX"];
 
 const projectsData: Project[] = [
   {
+    id: "seapedia",
+    title: "Seapedia",
+    categories: ["Website", "Mobile App", "UI/UX"],
+    techStack: "Django, Next.js",
+    description: "Seapedia is a marine-focused ecommerce platform that offers fishing gear, diving equipment, marine essentials, and ocean lifestyle products. It helps users easily discover and purchase quality products for every ocean adventure.",
+    bullets: [
+      "Designed the complete UI/UX of the application, ensuring an intuitive and engaging user experience for browsing and purchasing marine-related products.",
+      "Developed the Frontend using Next.js to build a highly responsive e-commerce platform with distinct interfaces for web and mobile.",
+      "Engineered the Backend architecture with Django, implementing robust product management, catalog display, search filtering, and secure APIs."
+    ],
+    links: [
+      { label: "Backend", url: "https://github.com/nadhifibr/seapedia-backend" },
+      { label: "Frontend", url: "https://github.com/nadhifibr/seapedia-frontend" },
+      { label: "Deployment", url: "https://seapedia.online" }
+    ],
+    coverMedia: "/assets/projects/seapedia/1.png",
+    gallery: [
+      { type: "image", url: "/assets/projects/seapedia/1.png" },
+      { type: "image", url: "/assets/projects/seapedia/2.jpg" },
+      { type: "image", url: "/assets/projects/seapedia/3.jpg" },
+      { type: "image", url: "/assets/projects/seapedia/4.jpg" },
+      { type: "image", url: "/assets/projects/seapedia/5.jpg" }
+    ]
+  },
+  {
     id: "mira",
     title: "MIRA",
     categories: ["Website", "Mobile App", "UI/UX"],
